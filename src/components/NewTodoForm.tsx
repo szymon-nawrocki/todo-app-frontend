@@ -29,7 +29,6 @@ const NewTodoForm = (props: Props) => {
             event.currentTarget.value = lastChar;
         }
 
-        console.log('=== set the input', input);
         setInput(event.currentTarget.value);
     };
 

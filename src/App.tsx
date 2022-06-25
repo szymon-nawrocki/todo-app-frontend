@@ -10,9 +10,7 @@ function App() {
     const [todos, setTodos] = useState<TodoInterface[]>(todolist);
 
     const addTodo = (newTodo: TodoInterface) => {
-        console.log('=== ADD TODO', newTodo);
         setTodos(todos.concat(newTodo));
-        console.log('==== TODO ADDED', todos);
     };
 
     return (
