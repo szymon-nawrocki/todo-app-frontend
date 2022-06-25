@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+import Todolist from "./components/Todolist";
+import NewTodoForm from "./components/NewTodoForm";
+
+import {todolist, TodoInterface} from './todos';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [todos, setTodos] = useState<TodoInterface[]>(todolist);
+
+    const addTodo = (newTodo: TodoInterface) => {
+        console.log('=== ADD TODO', newTodo);
+        setTodos(todos.concat(newTodo));
+        console.log('==== TODO ADDED', todos);
+    };
+
+    return (
+        <div className="App">
+            <div>
+                <Todolist todos={todos} />
+                <NewTodoForm addTodo={addTodo} />
+            </div>
+        </div>
+    );
 }
 
 export default App;
