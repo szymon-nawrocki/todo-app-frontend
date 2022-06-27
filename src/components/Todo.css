@@ -1,0 +1,44 @@
+.todo-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    padding: 4px 10px;
+    border-bottom: 0.01px solid grey;
+}
+
+.todo-container:nth-child(odd) {
+    background: rgb(255, 255, 255);
+}
+
+.todo-container>div {
+    display: flex;
+}
+
+.todo-container:hover .remove-btn {
+    visibility: visible;
+    height: 30px;
+    border: none;
+    background: none;
+    color: transparent;
+    text-shadow: 0 0 0 red;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-size: 0.65rem;
+}
+
+.todo {
+    font-weight: 400;
+    font-size: 0.65rem;
+    padding-left: 5px;
+}
+
+.todo-done {
+    text-decoration: line-through;
+}
+
+.remove-btn {
+    visibility: hidden;
+}
