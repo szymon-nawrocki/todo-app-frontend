@@ -1,26 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 
-import Todolist from "./components/Todolist";
-import NewTodoForm from "./components/NewTodoForm";
+import List from './components/List';
 
-import {todolist, TodoInterface} from './todos';
-
-function App() {
-    const [todos, setTodos] = useState<TodoInterface[]>(todolist);
-
-    const addTodo = (newTodo: TodoInterface) => {
-        setTodos(todos.concat(newTodo));
-    };
-
-    return (
-        <div className="App">
-            <div>
-                <Todolist todos={todos} />
-                <NewTodoForm addTodo={addTodo} />
-            </div>
-        </div>
-    );
-}
+const App = () => (
+    <div className="app-container">
+        <List />
+    </div>
+);
 
 export default App;

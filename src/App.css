@@ -1,25 +1,16 @@
-.App {
-  text-align: center;
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-#todolist {
-  color: blue;
-}
-
-#todolist-list-wrapper {
-  list-style: none;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-#todolist-form {
-  margin-top: 50px;
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(127, 28, 195);
+  background: linear-gradient(90deg, rgba(127, 28, 195, 1) 0%, rgba(75, 164, 255, 1) 49%, rgba(193, 67, 102, 1) 89%);
 }
