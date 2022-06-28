@@ -6,12 +6,15 @@
   font-size: 22px;
 }
 
-.app-container {
+.app-background {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100vw;
-  background: rgb(127, 28, 195);
   background: linear-gradient(90deg, rgba(127, 28, 195, 1) 0%, rgba(75, 164, 255, 1) 49%, rgba(193, 67, 102, 1) 89%);
+}
+
+.app-container {
+  margin-top: 7%;
+  width: 40%;
 }
