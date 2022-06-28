@@ -5,7 +5,7 @@ export interface TodoInterface {
     subtasks?: SubtodoInteface[]
 }
 
-interface SubtodoInteface {
+export interface SubtodoInteface {
     id: string;
     name: string,
         done: boolean
