@@ -8,7 +8,7 @@ export interface TodoInterface {
 export interface SubtodoInteface {
     id: string;
     name: string,
-        done: boolean
+    done: boolean
 }
 
 // @TODO remove once API integration is done
@@ -20,17 +20,17 @@ export const todolist: TodoInterface[] = [
         subtasks: [
             {
                 id: '1252151331512',
-                name: 'buy potatoes',
+                name: 'buy shrimps',
                 done: false
             },
             {
                 id: '1252151251544',
-                name: 'buy frozen vegetables',
+                name: 'buy asparagus',
                 done: false
             },
             {
                 id: '1244151251512',
-                name: 'buy meat',
+                name: 'buy white wine',
                 done: false
             },
         ]
@@ -59,7 +59,7 @@ export const todolist: TodoInterface[] = [
     },
     {
         id: '1271151251512',
-        name: "Buy white tshirt",
+        name: "Buy the bike parts",
         done: false,
     },
 ];
