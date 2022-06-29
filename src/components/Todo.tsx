@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Todo.css';
-import { TodoInterface } from "../todos";
+import { SubtodoInteface, TodoInterface } from "../todos";
+import SubTodoList from "./SubTodoList";
 
 interface Props {
     id: string;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const Todo = ({ id, todos, setTodos }: Props) => {
+    const [subTodosVisible, setSubTodosVisible] = useState(false);
     const todo = todos.find((todo) => todo.id === id);
 
     if (!todo) {
@@ -24,16 +26,29 @@ const Todo = ({ id, todos, setTodos }: Props) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
 
+    const addSubTodo = (subTodo: SubtodoInteface) => {
+        const updatedTodo = !todo.subtasks
+            ? {...todo, subtasks: [subTodo]}
+            : {...todo, subtasks: todo.subtasks.concat(subTodo)};
+
+        const updatedTodos = todos.map(t => t.id !== id ? t : updatedTodo);
+
+        setTodos(updatedTodos);
+    };
+
     return (
-        <div className="todo-container">
-            <div>
-                <input type="checkbox" onChange={handleCheckbox} checked={todo.done} />
-                <p className={todo.done ? 'todo todo-done' : 'todo'}>{todo.name}</p>
+        <>
+            <div onClick={() => setSubTodosVisible(!subTodosVisible)} className="todo-container">
+                <div>
+                    <input type="checkbox" onChange={handleCheckbox} checked={todo.done} />
+                    <p className={todo.done ? 'todo todo-done' : 'todo'}>{todo.name}</p>
+                </div>
+                <button className="remove-btn" type="button" onClick={handleDeleteBtn}>
+                    &#10060;
+                </button>
             </div>
-            <button className="remove-btn" type="button" onClick={handleDeleteBtn}>
-                &#10060;
-            </button>
-        </div>
+            <SubTodoList isVisible={subTodosVisible}  todo={todo} todos={todos} setTodos={setTodos} addSubTodo={addSubTodo} />
+        </>
     );
 };
 
