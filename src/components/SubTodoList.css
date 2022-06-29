@@ -3,10 +3,9 @@
 }
 
 #new-subtodo-form input {
-    height: 40px;
     box-sizing: border-box;
     width: 100%;
-    padding: 10px 10px;
+    padding: 5px 50px;
     border: none;
     font-size: 0.8rem;
     outline: none;
@@ -16,4 +15,5 @@
 
 #new-subtodo-form input::placeholder {
     color: #28d9f5;
+    font-size: 0.7rem;
 }

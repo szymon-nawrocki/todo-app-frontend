@@ -38,11 +38,11 @@ const Todo = ({ id, todos, setTodos }: Props) => {
 
     return (
         <>
-            <div onClick={() => setSubTodosVisible(!subTodosVisible)} className="todo-container">
-                <div>
+            <div className="todo-container">
+                <>
                     <input type="checkbox" onChange={handleCheckbox} checked={todo.done} />
-                    <p className={todo.done ? 'todo todo-done' : 'todo'}>{todo.name}</p>
-                </div>
+                    <p onClick={() => setSubTodosVisible(!subTodosVisible)} className={todo.done ? 'todo todo-done' : 'todo'}>{todo.name}</p>
+                </>
                 <button className="remove-btn" type="button" onClick={handleDeleteBtn}>
                     &#10060;
                 </button>

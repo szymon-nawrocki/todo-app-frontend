@@ -6,7 +6,6 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
     padding: 10px 15px;
     color: white;
 }
@@ -14,6 +13,8 @@
 .title {
     font-size: 1.4rem;
     letter-spacing: 0.8px;
+    width: 90%;
+    text-align: center;
 }
 
 .plus-btn {
@@ -24,6 +25,7 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
+    width: 10%;
 }
 
 .todos {

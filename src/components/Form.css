@@ -11,4 +11,5 @@
 
 .list-form input::placeholder {
     color: #28d9f5;
+    padding-left: 20px;
 }

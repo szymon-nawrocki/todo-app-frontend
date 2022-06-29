@@ -19,6 +19,10 @@ const Form = ({ visible, todos, setTodos }: Props) => {
     const addTodo = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
+        if (todo === '') {
+            return null;
+        }
+
         const newTodo: TodoInterface = {
             id: Math.random().toString(16).slice(2),
             name: todo,
