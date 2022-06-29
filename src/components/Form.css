@@ -1,10 +1,14 @@
 .list-form input {
     box-sizing: border-box;
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 0.8rem;
     border: none;
     outline: none;
-    background: rgb(247, 247, 247);
-    border: 3px solid greenyellow;
+    border-bottom: 1px solid greenyellow;
+    background-color: #494747;
+}
+
+.list-form input::placeholder {
+    color: #28d9f5;
 }
