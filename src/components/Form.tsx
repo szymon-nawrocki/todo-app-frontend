@@ -19,7 +19,7 @@ const Form = ({ visible, todos, setTodos }: Props) => {
     const addTodo = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        if (todo === '') {
+        if (!todo) {
             return null;
         }
 
