@@ -1,0 +1,19 @@
+#new-subtodo-form {
+    padding-left: 40px;
+}
+
+#new-subtodo-form input {
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    font-size: 0.8rem;
+    outline: none;
+    border-bottom: 0.01px solid greenyellow;
+    background-color: #494747;
+}
+
+#new-subtodo-form input::placeholder {
+    color: #28d9f5;
+}
